@@ -9,12 +9,12 @@ WS2812_Simple leds(LED_COUNT, LED_PIN, RMT_CHANNEL_0);
 void setup() {
     leds.begin();
     leds.setBrightness(200);
-    leds.fill(255, 0, 0); // Wszystkie diody na czerwono
+    leds.fill(255, 0, 0); 
     leds.show();
 }
 
 void loop() {
-    leds.rainbowMove(); // Efekt tęczy w ruchu
+    leds.rainbowMove();
     leds.show();
     delay(50);
 }
