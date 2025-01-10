@@ -1,0 +1,7 @@
+.pio/
+.vscode/
+wokwi.toml
+platformio.ini
+diagram.json
+
+!.gitignore
