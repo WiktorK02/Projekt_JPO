@@ -6,16 +6,18 @@
 #define LED_COUNT 16 
 //modify it 
 
-WS2812_Simple leds(LED_COUNT, LED_PIN, RMT_CHANNEL_0);
+using namespace leds; 
+
+WS2812_Simple ledsws2812(LED_COUNT, LED_PIN, RMT_CHANNEL_0);
 
 void setup() {
-    leds.begin();
-    leds.setBrightness(255);
+    ledsws2812.begin();
+    ledsws2812.setBrightness(255);
     //inicialization
 }
 
 void loop() {
-    leds.rainbowMove(); // random effect 
-    leds.show();
+    ledsws2812.rainbowMove(); // random effect 
+    ledsws2812.show();
     delay(50);
 }
